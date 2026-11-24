@@ -1,0 +1,127 @@
+/*
+  MANUAL DE ESTABILIDAD NÁUTICA — HOJA DE ESTILOS
+  Este archivo controla la apariencia visual; no contiene el texto del capítulo.
+  Los colores principales se definen como variables para poder ajustar la paleta
+  desde un único lugar.
+*/
+:root{--navy:#063B4C;--teal:#087E8B;--sea:#64B6AC;--pale:#DCEFF0;--paper:#F7FAFA;--line:#dce7e8}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:75px}body{margin:0;background:var(--paper);color:#29444a;font-family:Arial,sans-serif}#side{position:fixed;inset:0 auto 0 0;width:265px;background:var(--navy);color:white;padding:22px 18px;display:flex;flex-direction:column;z-index:9;transition:.25s}#side.closed{transform:translateX(-100%)}.brand{font-weight:bold;padding-bottom:24px;border-bottom:1px solid #ffffff35}.brand button{float:right;background:none;border:0;color:white;font-size:24px;cursor:pointer}#side small{color:#9fc6c9;margin:26px 0 10px;letter-spacing:.13em}#side a{display:block;color:#e8f5f5;text-decoration:none;font-size:12px;padding:9px;border-radius:6px}#side a:hover{background:#ffffff18}#side nav{border-left:1px solid #ffffff40;margin-left:12px;padding-left:8px}#side p{margin-top:auto;color:#9fc6c9;font-size:11px}#open{display:none;position:fixed;top:12px;left:12px;z-index:12;background:var(--navy);color:white;border:0;padding:10px;border-radius:8px}main{margin-left:265px;transition:.25s}main.expanded{margin-left:0}header{height:56px;position:sticky;top:0;background:#ffffffed;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:0 28px;font-size:11px;color:#657d82;z-index:5}.grid{max-width:1400px;margin:auto;display:grid;grid-template-columns:minmax(0,820px) 190px;gap:48px;padding:45px 48px}article{min-width:0}.eyebrow{font-size:10px;letter-spacing:.15em;font-weight:bold;color:var(--teal)}h1{font:600 clamp(32px,4vw,45px)/1.12 Georgia,serif;color:var(--navy);margin:15px 0 8px}.es{font:18px Georgia,serif;color:var(--teal);margin:0 0 22px}.intro{background:var(--pale);border-left:3px solid var(--sea);padding:14px 17px;font-size:13px;line-height:1.6;margin:24px 0 45px}section{margin-bottom:60px;padding-top:10px}h2{font:600 29px/1.2 Georgia,serif;color:var(--navy);margin:8px 0}h3{font:600 21px Georgia,serif;color:var(--navy);margin:28px 0 8px}h4{font:bold 16px Arial,sans-serif;color:var(--teal);border-top:1px solid var(--line);padding-top:18px;margin:30px 0 10px}p,li{font:15px/1.8 Georgia,serif}.formula{background:#edf5f5;border:1px solid #d5e7e8;border-radius:8px;padding:16px 19px;margin:18px 0;line-height:1.9;color:var(--navy);font-size:14px}.formula b{font-size:16px}.extra{background:white;border:1px solid var(--line);border-left:4px solid var(--sea);padding:14px 18px;margin:24px 0}.extra b{color:var(--teal);font-size:13px}.answer{background:#e9f5f1;color:#176c62;padding:10px 13px;border-radius:7px;font:bold 13px Arial}.figure{border:1px dashed #9bbfc0;background:#f1f7f7;border-radius:8px;padding:30px;text-align:center;color:#55777c;font-size:12px;margin:20px 0}li{padding:7px 0;border-bottom:1px solid var(--line)}.notice{background:#fff6e6;border:1px solid #f0dfb9;padding:14px;border-radius:8px;font:12px/1.6 Arial;color:#6b5528}.toc{position:sticky;top:80px;align-self:start}.toc b{font-size:10px;letter-spacing:.13em;color:var(--teal)}.toc a{display:block;text-decoration:none;color:#5b7479;font-size:11px;padding:9px 0;border-bottom:1px solid var(--line)}footer{border-top:1px solid var(--line);padding:22px 0;color:#657d82;font-size:11px}@media(max-width:1000px){.grid{grid-template-columns:1fr}.toc{display:none}}@media(max-width:700px){main{margin:0}.grid{padding:28px 18px}header{padding:0 12px 0 55px}header span:last-child{display:none}h1{font-size:34px}}
+
+.en-subtitle{font:500 16px 'Source Serif 4',serif;color:var(--teal);margin:3px 0 18px}
+h3{margin-bottom:3px}
+h4{margin-bottom:4px}
+
+
+/* Fórmulas: bloque visual suave y definiciones discretas */
+.formula{
+  background:linear-gradient(100deg,#edf5f5 0%,#f4f8f8 100%);
+  border:0;
+  border-left:3px solid #64B6AC;
+  border-radius:0 7px 7px 0;
+  padding:15px 19px;
+  margin:20px 0;
+  color:#063B4C;
+  line-height:1.65;
+}
+.formula .formula-main{
+  font-family:'DM Sans',sans-serif;
+  font-size:19px;
+  font-weight:700;
+  letter-spacing:.01em;
+  margin-bottom:10px;
+}
+.formula-definitions{
+  display:grid;
+  gap:4px;
+  padding-top:9px;
+  border-top:1px solid #d9e8e8;
+}
+.formula-definitions div{
+  display:flex;
+  gap:10px;
+  align-items:baseline;
+  font-size:12px;
+  line-height:1.45;
+  color:#587176;
+}
+.formula-definitions b{
+  min-width:34px;
+  color:#087E8B;
+  font-size:12px;
+  font-weight:700;
+}
+.formula-definitions span{font-size:12px;color:#587176}
+
+/* Definiciones: identificación sutil del término al que pertenece el texto */
+.definition-term{
+  margin:27px 0 8px;
+  padding:7px 0 7px 13px;
+  border-left:2px solid #9bcfc9;
+  background:linear-gradient(90deg,rgba(220,239,240,.52) 0%,rgba(247,250,250,0) 88%);
+}
+.definition-term h3{
+  margin:0;
+  font:600 20px/1.25 'Source Serif 4',serif;
+  color:#063B4C;
+}
+.definition-term span{
+  display:block;
+  margin-top:2px;
+  font:500 13px/1.4 'Source Serif 4',serif;
+  color:#087E8B;
+}
+.definition-term + p{
+  margin-top:9px;
+  padding-left:15px;
+}
+
+/* Jerarquía H3: tono diferenciado del H2 y su subtítulo */
+article h3{
+  color:#075B66;
+  position:relative;
+  padding-left:13px;
+  border-left:2px solid #64B6AC;
+  margin-top:30px;
+  margin-bottom:9px;
+}
+
+/* Figuras originales extraídas directamente del PDF fuente */
+.original-figure{margin:24px 0 26px;text-align:center}
+.original-figure img{display:block;max-width:100%;height:auto;max-height:560px;margin:0 auto;object-fit:contain;cursor:zoom-in}
+.original-figure figcaption{font:12px/1.5 'DM Sans',sans-serif;color:#657d82;margin-top:8px}
+.original-figure img:active{cursor:zoom-out}
+@media(min-width:900px){.original-figure img{max-width:92%}}
+
+.figure-link{display:block;text-decoration:none}
+
+/* Solucionario de ejercicios: jerarquía editorial coherente con el capítulo */
+.solved-exercise{margin:30px 0 42px;padding:0 0 28px;border-bottom:1px solid #dce7e8}
+.solved-exercise h3{margin-top:0}
+.source-question,.translated-question{margin:14px 0 17px;padding:12px 16px 10px 18px;border-left:2px solid #9bbfc0;background:linear-gradient(90deg,rgba(220,239,240,.38),rgba(247,250,250,0) 88%)}
+.source-question span,.translated-question span{font:700 9px 'DM Sans',sans-serif;letter-spacing:.14em;color:#087E8B}
+.source-question p,.translated-question p{margin:6px 0 0;font-size:14px;line-height:1.7}
+.source-question p{color:#62777b;font-style:italic}
+.solution-intro{font-size:14px}
+.formula-steps{font-size:13px;line-height:1.9;color:#48656b;margin-top:8px}
+.formula-steps b{font-size:15px;color:#063B4C}
+
+/* Firma discreta en el pie de página */
+footer .author-credit{display:inline-block;margin-top:7px;font-size:11px;letter-spacing:.06em;color:#087E8B}
+
+
+/* --------------------------------------------------------------------------
+   GUÍA DE LOS BLOQUES CSS
+   --------------------------------------------------------------------------
+   :root              Paleta cromática del manual (azul petróleo y turquesas).
+   Reset universal    box-sizing:border-box facilita calcular anchos y paddings.
+   body               Fondo, color de texto y tipografía general.
+   #side / #open      Barra lateral y botón que la vuelve a abrir.
+   main / .grid       Distribución del contenido y adaptación del espacio.
+   header / .toc      Cabecera superior e índice de navegación del capítulo.
+   h1...h4            Jerarquía tipográfica de títulos y subtítulos.
+   .formula           Presentación visual de fórmulas matemáticas.
+   .definition-term   Estilo especial para términos y definiciones.
+   .original-figure   Tamaño, alineación y leyenda de las figuras del libro.
+   .solved-exercise   Separación visual de los 14 ejercicios resueltos.
+   footer             Identificación del manual y firma del autor.
+   @media             Reglas responsive para tabletas y teléfonos.
+   -------------------------------------------------------------------------- */
